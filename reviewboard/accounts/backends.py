@@ -122,7 +122,6 @@ class StandardAuthBackend(AuthBackend, ModelBackend):
 
     def update_password(self, user, password):
         user.password = hashers.make_password(password)
-        user.save()
 
 class NISBackend(AuthBackend):
     """Authenticate against a user on an NIS server."""
